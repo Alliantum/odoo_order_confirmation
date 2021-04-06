@@ -25,8 +25,8 @@
         'purchase_stock'
     ],
     'data': [
-        'security/ir.model.access.csv',
         'security/sales_stock_security.xml',
+        'security/ir.model.access.csv',
         'views/res_config_settings_view.xml',
         'views/sale.xml',
     ],
