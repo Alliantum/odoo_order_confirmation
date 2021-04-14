@@ -18,73 +18,73 @@ msgstr ""
 #. module: odoo_order_confirmation
 #: model:ir.model,name:odoo_order_confirmation.model_mail_activity
 msgid "Activity"
-msgstr ""
+msgstr "Activiteit"
 
 #. module: odoo_order_confirmation
 #: model_terms:ir.ui.view,arch_db:odoo_order_confirmation.stock_warning_view_order_form
 msgid "Approve Order"
-msgstr ""
+msgstr "Order goedkeuren"
 
 #. module: odoo_order_confirmation
 #: model:ir.model.fields,field_description:odoo_order_confirmation.field_sale_order_line__blocking
 msgid "Blocking"
-msgstr ""
+msgstr "Blokkeren"
 
 #. module: odoo_order_confirmation
 #: model:ir.model,name:odoo_order_confirmation.model_res_company
 msgid "Companies"
-msgstr ""
+msgstr "Bedrijven"
 
 #. module: odoo_order_confirmation
 #: model:ir.model,name:odoo_order_confirmation.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Configuratie instellingen"
 
 #. module: odoo_order_confirmation
 #: model_terms:ir.ui.view,arch_db:odoo_order_confirmation.stock_warning_view_order_form
 msgid "Confirm"
-msgstr ""
+msgstr "Bevestigen"
 
 #. module: odoo_order_confirmation
 #: model_terms:ir.ui.view,arch_db:odoo_order_confirmation.res_config_settings_view_form
 msgid "Enable the warning on sale's order with big quantities of products involved.<br/> Decide the maximum allowed percentage before the warning is raised and the sale order required confirmation from stock managers."
-msgstr ""
+msgstr "Schakel de waarschuwing in voor verkooporders met grote hoeveelheden producten.<br/> Bepaal het maximaal toegestane percentage voordat de waarschuwing wordt gegeven en de verkooporder moet worden bevestigd door voorraadbeheerders."
 
 #. module: odoo_order_confirmation
 #: model:ir.model.fields,field_description:odoo_order_confirmation.field_res_config_settings__kg_onsale_warning
 msgid "Limit Kg"
-msgstr ""
+msgstr "Limiet Kg"
 
 #. module: odoo_order_confirmation
 #: model:ir.model.fields,field_description:odoo_order_confirmation.field_res_config_settings__units_onsale_warning
 msgid "Limit Units"
-msgstr ""
+msgstr "Eenheden beperken"
 
 #. module: odoo_order_confirmation
 #: code:addons/odoo_order_confirmation/models/sale_order.py:135
 #, python-format
 msgid "Limit on SO quantities surpassed!"
-msgstr ""
+msgstr "Limiet op SO hoeveelheden overschreden!"
 
 #. module: odoo_order_confirmation
 #: model:ir.model.fields,field_description:odoo_order_confirmation.field_res_company__stock_warning_notify
 msgid "Notify Stock Managers Warn"
-msgstr ""
+msgstr "Waarschuw de voorraadbeheerders"
 
 #. module: odoo_order_confirmation
 #: model_terms:ir.ui.view,arch_db:odoo_order_confirmation.res_config_settings_view_form
 msgid "Notify and create activity for:"
-msgstr ""
+msgstr "Verwittig en creëer activiteit voor:"
 
 #. module: odoo_order_confirmation
 #: model:ir.model,name:odoo_order_confirmation.model_sale_order
 msgid "Sale Order"
-msgstr ""
+msgstr "Verkooporder"
 
 #. module: odoo_order_confirmation
 #: model:ir.model,name:odoo_order_confirmation.model_sale_order_line
 msgid "Sales Order Line"
-msgstr ""
+msgstr "Verkooporderregel"
 
 #. module: odoo_order_confirmation
 #: code:addons/odoo_order_confirmation/models/sale_order.py:129
@@ -92,42 +92,44 @@ msgstr ""
 msgid "Selling {} {} of {} exceeds the limit for this product, which is set to {} {}.\n"
 "\n"
 "If you save or confirm this sale order with the present amounts, it will remain blocked until one of the stock managers will confirm it."
-msgstr ""
+msgstr "De verkoop van {} {} van {} overschrijdt de limiet voor dit product, die is ingesteld op {} {}.\n"
+"\n"
+"Als u deze verkooporder met de huidige bedragen opslaat of bevestigt, blijft hij geblokkeerd tot een van de voorraadbeheerders hem zal bevestigen."
 
 #. module: odoo_order_confirmation
 #: model:res.groups,name:odoo_order_confirmation.group_sale_stock_approval
 msgid "Stock Approval"
-msgstr ""
+msgstr "Voorraad Goedkeuring"
 
 #. module: odoo_order_confirmation
 #: model:ir.model.fields,field_description:odoo_order_confirmation.field_sale_order__was_stock_approved
 msgid "Stock Approved"
-msgstr ""
+msgstr "Voorraad Goedgekeurd"
 
 #. module: odoo_order_confirmation
 #: code:addons/odoo_order_confirmation/models/sale_order.py:21
 #: model:ir.model.fields,field_description:odoo_order_confirmation.field_mail_activity__is_stock_confirmation
 #, python-format
 msgid "Stock Confirmation"
-msgstr ""
+msgstr "Voorraadbevestiging"
 
 #. module: odoo_order_confirmation
 #: model:ir.model.fields,field_description:odoo_order_confirmation.field_res_config_settings__stock_warning_notify
 msgid "Users to notify"
-msgstr ""
+msgstr "Gebruikers in kennis te stellen"
 
 #. module: odoo_order_confirmation
 #: model:ir.model.fields,field_description:odoo_order_confirmation.field_res_config_settings__percentage_warning
 msgid "Warning Percent on Sale"
-msgstr ""
+msgstr "Waarschuwing Procent op Uitverkoop"
 
 #. module: odoo_order_confirmation
 #: model_terms:ir.ui.view,arch_db:odoo_order_confirmation.res_config_settings_view_form
 msgid "Warnings"
-msgstr ""
+msgstr "Waarschuwingen"
 
 #. module: odoo_order_confirmation
 #: model:res.groups,comment:odoo_order_confirmation.group_sale_stock_approval
 msgid "the user will have read access to all data in the sales application."
-msgstr ""
+msgstr "zal de gebruiker leestoegang hebben tot alle gegevens in de verkoopapplicatie."
 
