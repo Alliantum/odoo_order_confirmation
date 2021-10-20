@@ -8,7 +8,6 @@ class ResCompany(models.Model):
 
     stock_warning_notify = fields.Many2many('res.users', string='Notify Stock Managers Warn')
 
-    @api.multi
     def write(self, vals):
         """Add the users in `stock_warning_notify` to `group_sale_stock_approval`"""
         if 'stock_warning_notify' in vals:

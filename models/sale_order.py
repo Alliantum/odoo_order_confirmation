@@ -20,7 +20,6 @@ class SaleOrder(models.Model):
         if not exists:
             selection.insert(0, ('stock_to_approve', _('Stock Confirmation')))
 
-    @api.multi
     def needs_confirmation(self):
         """Check if the sale order needs to be approved"""
         if any(self.order_line.mapped('blocking')):
@@ -71,7 +70,6 @@ class SaleOrder(models.Model):
                                                    message_type="comment",
                                                    subtype="mail.mt_comment")
 
-    @api.multi
     def warning_action_confirm(self):
         """Check if the sale order can be confirmed"""
         if self.needs_confirmation():
@@ -87,7 +85,6 @@ class SaleOrder(models.Model):
             sale._block_sale_order()
         return sale
 
-    @api.multi
     def action_stock_approve(self):
         """Approve the sale order and set it's state to draft"""
         self.sudo().order_line.write({
