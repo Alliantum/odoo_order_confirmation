@@ -30,7 +30,7 @@ class SaleOrder(models.Model):
         """Block the Sale Order and send a message to the Stock Managers"""
         self.state = 'stock_to_approve'
         odoobot_id = self.env['ir.model.data'].xmlid_to_res_id("base.partner_root")
-        stock_managers = self.env.user.company_id.stock_warning_notify
+        stock_managers = self.env.company.stock_warning_notify
         if stock_managers:
             for stock_manager in stock_managers:
                 note = '<p>One or more of the products in this Sale Order ({}) has exceeded the limit on big sales.</p>' \
