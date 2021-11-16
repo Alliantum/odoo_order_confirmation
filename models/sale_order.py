@@ -53,7 +53,7 @@ class SaleOrder(models.Model):
         else:
             for user in self.env.ref('stock.group_stock_manager').users:
                 if user.partner_id:
-                    channel_id = self.sudo(user.id).env['mail.channel'].search([('name', '=', 'OdooBot')], limit=1)
+                    channel_id = self.with_user(user.id).env['mail.channel'].search([('name', '=', 'OdooBot')], limit=1)
                     message = "<p>One or more of the products in this Sale Order ({}) has exceeded the limit on big sales.<br/>" \
                               "However, at this moment there's no reposible assigned to manage this kind of situation, so the sale order will stay locked.</p>" \
                               "<p>Please, be ware that it's very important to set some responsible in Sales/Configuration/Settings/Warning/Create activity for solve this problem.</p>".format(self.name)
