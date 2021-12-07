@@ -16,7 +16,7 @@
     </a>
     <div>
         <h1>Order Confirmation</h1>
-        Block a SO until Stock Mangers allow it depending on maximum amounts
+        Block a SO until Stock Managers allow it depending on maximum amounts
         <hr>
     </div>
 </div>
