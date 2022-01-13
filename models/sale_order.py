@@ -101,10 +101,10 @@ class SaleOrderLine(models.Model):
 
     blocking = fields.Boolean('Blocking')
 
-    @api.onchange('product_uom_qty', 'product_uom', 'route_id')
-    def _onchange_product_id_check_availability(self):
+    @api.onchange('product_uom_qty', 'product_uom')
+    def _onchange_product_uom_qty(self):
         """Check the quantity as well as the product's uom in order to apply the limits"""
-        res = super(SaleOrderLine, self)._onchange_product_id_check_availability()
+        res = super(SaleOrderLine, self)._onchange_product_uom_qty()
         if self.product_id and self.product_id.type == 'product':
             need_check_warning = self.env['ir.config_parameter'].sudo().get_param('odoo_order_confirmation.percentage_warning')
             if need_check_warning:
