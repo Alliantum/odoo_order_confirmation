@@ -68,7 +68,7 @@ class SaleOrder(models.Model):
                     channel_id.sudo().message_post(body=message,
                                                    author_id=odoobot_id,
                                                    message_type="comment",
-                                                   subtype="mail.mt_comment")
+                                                   subtype_xmlid="mail.mt_comment")
 
     def warning_action_confirm(self):
         """Check if the sale order can be confirmed"""
