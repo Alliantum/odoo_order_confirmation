@@ -47,7 +47,7 @@ class SaleOrder(models.Model):
                     'res_id': self.id,
                     'res_model_id': self.env.ref('sale.model_sale_order').id,
                     'automated': True,
-                    'create_user_id': odoobot_id,
+                    'create_uid': odoobot_id,
                     'is_stock_confirmation': True,
                 })
         else:
