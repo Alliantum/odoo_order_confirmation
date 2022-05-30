@@ -1,24 +1,12 @@
-# -*- encoding: utf-8 -*-
-
 from odoo import fields, models, api, _
+
 
 
 class SaleOrder(models.Model):
     _inherit = "sale.order"
 
+    state = fields.Selection(selection_add=[('stock_to_approve', 'Stock Confirmation'), ('draft',)], ondelete={'stock_to_approve': lambda recs: recs.write({'state': 'sale'})})
     was_stock_approved = fields.Boolean('Stock Approved', readonly=True, default=False)
-
-    @api.model
-    def _setup_fields(self):
-        """Add the `stock_to_approve` status"""
-        super(SaleOrder, self)._setup_fields()
-        selection = self._fields['state'].selection
-        exists = False
-        for idx, (state, __) in enumerate(selection):
-            if state == 'stock_to_approve':
-                exists = True
-        if not exists:
-            selection.insert(0, ('stock_to_approve', _('Stock Confirmation')))
 
     def needs_confirmation(self):
         """Check if the sale order needs to be approved"""
